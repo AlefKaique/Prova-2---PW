@@ -1,0 +1,172 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0c1a;
+    color: #c5c6c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+body.login-mode {
+    background-color: #0b0c1a;
+}
+
+.container {
+    background-color: #1f2833;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 100%;
+    transition: background-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.container.login-mode {
+    background-color: #1f2833;
+    
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #66fcf1;
+    transition: color 0.3s ease;
+}
+
+.container.login-mode h1 {
+    color: #66fcf1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #c5c6c7;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.container.login-mode label {
+    color: #c5c6c7;
+}
+
+input {
+    padding: 12px 15px;
+    border: 1px solid #45a29e;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+    font-size: 1rem;
+    background-color: #0b0c1a;
+    color: #c5c6c7;
+    margin-bottom: 0.5rem;
+    width: 260px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #66fcf1;
+    box-shadow: 0 0 5px rgba(102, 252, 241, 0.3);
+}
+
+.container.login-mode input:focus {
+    border-color: #66fcf1;
+    box-shadow: 0 0 5px rgba(102, 252, 241, 0.3);
+}
+
+button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+button.register {
+    background-color: #66fcf1;
+    color: #0b0c1a;
+}
+
+button.register:hover {
+    background-color: #45a29e;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+button.login {
+    background-color: #66fcf1;
+    color: #0b0c1a;
+}
+
+button.login:hover {
+    background-color: #45a29e;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+#message-container {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 6px;
+    padding: 15px;
+    display: none;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+#message-container.success {
+    background-color: rgba(102, 252, 241, 0.1);
+    color: #66fcf1;
+    border: 1px solid #66fcf1;
+}
+
+#message-container.error {
+    background-color: rgba(230, 57, 70, 0.1);
+    color: #e63946;
+    border: 1px solid #e63946;
+}
+
+#message-container.show {
+    display: block;
+    opacity: 1;
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #c5c6c7;
+    transition: color 0.3s ease;
+}
+
+.switch-form a {
+    color: #66fcf1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.switch-form a:hover {
+    color: #45a29e;
+}
+
+.container.login-mode .switch-form a {
+    color: #66fcf1;
+}
+
+.container.login-mode .switch-form a:hover {
+    color: #45a29e;
+}

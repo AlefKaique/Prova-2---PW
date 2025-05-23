@@ -1,0 +1,483 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0c1a;
+    color: #c5c6c7;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1f2833;
+    color: #66fcf1;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: #66fcf1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #45a29e;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #66fcf1;
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #66fcf1;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+main {
+    padding: 2rem;
+}
+
+.hero {
+    background-image: url('../img/espaco_fundo.jpg');
+    /* Substitua pelo seu background */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Efeito de transição suave */
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.hero:hover {
+    opacity: 1;
+    /* Efeito de hover */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.promocoes {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+.promocoes h3 {
+    margin-top: 0;
+    color: #66fcf1;
+}
+
+.promocoes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.promocoes li {
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    display: inline-block;
+    background-color: #66fcf1;
+    color: #0b0c1a;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    /* Transição suave */
+}
+
+.button:hover {
+    background-color: #45a29e;
+    /* Efeito de hover */
+}
+
+.destinos-section {
+    margin-bottom: 3rem;
+}
+
+.destinos-section h2 {
+    color: #66fcf1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.destino {
+    background-color: #1f2833;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    /* Transição suave */
+}
+
+.destino:hover {
+    transform: scale(1.05);
+    /* Efeito de hover */
+}
+
+.destino img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.destino h3 {
+    color: #c5c6c7;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.destino p {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.simular-reserva {
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 0.8rem;
+    background-color: #66fcf1;
+    color: #0b0c1a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    /* Transição suave */
+}
+
+.simular-reserva:hover {
+    background-color: #45a29e;
+    /* Efeito de hover */
+}
+
+.reserva-section {
+    background-color: #1f2833;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reserva-section h2 {
+    color: #66fcf1;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#reserva-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    color: #c5c6c7;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #45a29e;
+    border-radius: 4px;
+    background-color: #0b0c1a;
+    color: #c5c6c7;
+    box-sizing: border-box;
+}
+
+.erro-mensagem {
+    color: #e63946;
+    margin-top: 0.5rem;
+}
+
+.carrinho {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #0b0c1a;
+    border-radius: 6px;
+    border: 1px solid #45a29e;
+}
+
+.carrinho h3 {
+    color: #66fcf1;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+#lista-carrinho {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrinho li {
+    background-color: #1f2833;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lista-carrinho li button {
+    background: none;
+    border: none;
+    color: #e63946;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#total-carrinho {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #66fcf1;
+    text-align: right;
+}
+
+.sobre-section {
+    padding: 2rem;
+    background-color: #1f2833;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-section h2 {
+    color: #66fcf1;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sobre-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre-content div {
+    margin-bottom: 1.5rem;
+}
+
+.sobre-content h3 {
+    color: #c5c6c7;
+    margin-top: 0;
+}
+
+.sobre-content p {
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #1f2833;
+    color: #c5c6c7;
+    text-align: center;
+    padding: 1rem 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        width: 100%;
+        background-color: #1f2833;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .menu li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .reserva-section {
+        padding: 1rem;
+    }
+
+    #reserva-form {
+        padding: 1rem;
+    }
+
+    .carrinho {
+        padding: 1rem;
+    }
+
+    .sobre-section {
+        padding: 1rem;
+    }
+}
+
+/* Estilos para o Modal */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #1f2833;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sucesso-mensagem {
+    color: #5cb85c;
+    margin-top: 0.5rem;
+}
+
+.auth-buttons button {
+    background: none;
+    border: 1px solid #66fcf1;
+    color: #66fcf1;
+    padding: 0.5rem 1rem;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+#loginBtn {
+    cursor: pointer;
+}
+
+#loginBtn:Hover {
+    background-color: #4efce8;
+    border: 1px solid #4efce8;
+    color: #0b0e1c;
+}
